@@ -28,13 +28,13 @@ class Reproducibles extends Model
     }
     public function directores()
     {
-        return $this->belongsToMany(Personas::class, 'reproducibles_personas', 'id_reproducible', 'id_persona')
+        return $this->belongsToMany(Personas::class, 'REPRODUCIBLES_PERSONAS', 'id_reproducible', 'id_persona')
             ->withPivot('rol')
             ->whereRaw('LOWER(rol) = ?', ['director']);
     }
     public function actores()
     {
-        return $this->belongsToMany(Personas::class, 'reproducibles_personas', 'id_reproducible', 'id_persona')
+        return $this->belongsToMany(Personas::class, 'REPRODUCIBLES_PERSONAS', 'id_reproducible', 'id_persona')
             ->withPivot('rol')
             ->whereRaw('LOWER(rol) = ?', ['actor']);
     }
