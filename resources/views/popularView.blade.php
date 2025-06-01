@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustTrack - Popular</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/popularView.css', 'resources/js/animacion_texto_ancho.js'])
     <style>
         /*Esto separa el header del contenido que está dentro de <main>*/
