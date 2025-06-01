@@ -46,7 +46,7 @@
                 </div>
                 <div id="columna_derecha">
                     <div id="contenedor_titulo">
-                        <h1 id="titulo_pelicula"> {{ $pelicula->nombre }} <span id="ano_palicula">( {{ \Carbon\Carbon::parse($pelicula->fecha_lanzamiento)->year }} )</span></h1>
+                        <h1 id="titulo_pelicula"> {{ $pelicula->nombre }} <span id="ano_palicula">({{ \Carbon\Carbon::parse($pelicula->fecha_lanzamiento)->year }})</span></h1>
                         <p id="titulo_original_pelicula">{{ $pelicula->nombre_original ?? '???' }}</p>
                     </div>
                     <div id="contenedor_sinopsis">
@@ -80,7 +80,7 @@
                             @endphp
 
                             @if ($videoId)
-                            <iframe width="560" height="315"
+                            <iframe
                                 src="https://www.youtube.com/embed/{{ $videoId }}"
                                 title="YouTube video player"
                                 frameborder="0"

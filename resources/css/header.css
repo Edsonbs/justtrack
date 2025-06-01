@@ -114,7 +114,6 @@
     
     /*Esto separa el header del contenido que está dentro de <main>*/
     #separador_header_contenido {
-        padding-top: 114px;
     }
 }
 
@@ -236,6 +235,6 @@
     
     /*Esto separa el header del contenido que está dentro de <main>*/
     #separador_header_contenido {
-        padding-top: 137px;
+        /*padding-top: 137px;*/
     }
 }

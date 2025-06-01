@@ -7,9 +7,12 @@
     max-width: 1540px;
     place-self: center;
 }
+#contenedor_peliculas * {
+    transition: all 0.25s ease-in-out;
+}
 #contenedor_peliculas > .pelicula {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: rgba(255, 255, 255, 0.3) solid 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 20px;
@@ -22,7 +25,7 @@
 }
 #contenedor_peliculas > .pelicula:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(80, 80, 80, 0.25);
 }
 #contenedor_peliculas > .pelicula > img {
     height: 300px;
@@ -51,8 +54,8 @@
     text-decoration: none;
 }
 #contenedor_peliculas > .pelicula > .interacciones_peliculas {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: rgba(255, 255, 255, 0.3) solid 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -68,8 +71,8 @@
     width: 25px;
     padding: 5px;
     border-radius: 50px;
-    border: rgba(255, 255, 255, 0.3) solid 2px;
-    background-color: rgba(255, 255, 255, 0.2);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 #contenedor_peliculas > .pelicula > .interacciones_peliculas > img:hover {
     background-color: rgba(255, 255, 255, 0.3);
