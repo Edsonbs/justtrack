@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JustTrack</title>
-        <link rel="stylesheet" href="style.css">
         @vite('resources/css/temporalView.css')
     </head>
     <body>

@@ -1,0 +1,84 @@
+#contenedor_peliculas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1540px;
+    place-self: center;
+}
+#contenedor_peliculas > .pelicula {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.3) solid 2px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    width: fit-content;
+    display: grid;
+    place-content: center;
+    place-self: center;
+    
+}
+#contenedor_peliculas > .pelicula:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+#contenedor_peliculas > .pelicula > img {
+    height: 300px;
+    width: 240px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#contenedor_peliculas > .pelicula > h1 {
+    color: white;
+    font-size: 16px;
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#contenedor_peliculas > .pelicula > h1 > span {
+    display: inline-block;
+}
+#contenedor_peliculas > .pelicula > h1.animacion_texto > span {
+    display: inline-block;
+    animation: animacion_titulo_largo 5s linear infinite;
+}
+#contenedor_peliculas > .pelicula > p {
+    color: rgb(200, 200, 200);
+}
+#contenedor_peliculas > a {
+    text-decoration: none;
+}
+#contenedor_peliculas > .pelicula > .interacciones_peliculas {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.3) solid 2px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+    place-self: center;
+    margin-top: 10px;
+}
+#contenedor_peliculas > .pelicula > .interacciones_peliculas > img {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius: 50px;
+    border: rgba(255, 255, 255, 0.3) solid 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#contenedor_peliculas > .pelicula > .interacciones_peliculas > img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* Animación deslizando de derecha a izquierda un título muy largo */
+@keyframes animacion_titulo_largo {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(var(--distancia-movimiento)); }
+    100% { transform: translateX(0); }
+}
