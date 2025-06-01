@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustTrack - Popular</title>
-    @vite('resources/css/header.css')
-    @vite('resources/css/general.css')
-    @vite('resources/css/popularView.css')
-    @vite('resources/js/animacion_texto_ancho.js')
+    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/popularView.css', 'resources/js/animacion_texto_ancho.js'])
 </head>
 
 <body>

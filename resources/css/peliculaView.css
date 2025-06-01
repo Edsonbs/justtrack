@@ -1,0 +1,227 @@
+main {
+    color: white;
+    width: 100%;
+}
+h2 {
+    margin-bottom: 5px;
+}
+
+/* APARTADO BANNER */
+main > #contenedor_banner {
+    margin-bottom: -7px;
+    width: 100%;
+}
+main > #contenedor_banner > #banner_pelicula{
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* CONTENDOR PRINCIPAL */
+main > #contenedor_info {
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    place-content: center;
+}
+main > #contenedor_info > #limitador_ancho {
+    display: flex;
+    gap: 30px;
+    max-width: 1500px;
+    min-width: 830px;
+}
+
+/************************/
+/* CONTENEDOR IZQUIERDO */
+/************************/
+main > #contenedor_info > #limitador_ancho > #columna_izquierda {
+    flex: 0 0 400px;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+    height: fit-content;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #caratula_pelicula {
+    /*height: 625px;
+    width: 500px;*/
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px -5px black;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+/* APARTADO INTERACCIONES PELICULAS */
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    box-shadow: 0 0 15px -5px black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    padding: 5px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > img {
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius: 100%;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > img:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > #restriccion_edad {
+    background-color: rgba(255, 165, 0, 0.5);
+    border: rgba(255, 165, 0, 0.5) solid 2px;
+    box-shadow: 0 0 15px -5px rgba(255, 165, 0, 1);
+    height: 49px;
+    width: 49px;
+    font-size: 22px;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+}
+
+/* APARTADO INFORMACIÓN RESUMIDA */
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    box-shadow: 0 0 15px -5px black;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #duracion_pelicula {}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #nombre_director {}
+main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #calificacion_promedio {}
+
+/**********************/
+/* CONTENEDOR DERECHO */
+/**********************/
+
+main > #contenedor_info > #limitador_ancho > #columna_derecha {
+    display: grid;
+    gap: 20px;
+    place-content: center;
+    flex: 1;
+}
+
+/* APARTADO TÍTULO */
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo {
+    margin-top: 5px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula {}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula > #ano_palicula {
+    color: rgb(165, 165, 165);
+    text-shadow: 0 0 5px black;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_original_pelicula {
+    color: rgb(210, 210, 210);
+}
+
+/* APARTADO SINOPSIS */
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis {
+    text-align: justify;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > h2 {}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > p {
+    color: rgb(210, 210, 210);
+}
+
+/* APARTADO PLATAFORMAS */
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula {
+    flex: 1;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > h2 {}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    box-shadow: 0 0 15px -5px black;
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 5px;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas > .plataforma {
+    display: grid;
+    place-content: center;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas > .plataforma > .logo_plataforma {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas > .plataforma > p {
+    place-self: center;
+    font-size: 12px;
+}
+
+/* APARTADO TRÁILERS */
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers {
+    flex: 1;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > h2 {}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > #trailers {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    box-shadow: 0 0 15px -5px black;
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 15px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > #trailers > iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* APARTADO REPARTO */
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto {
+    flex: 1;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > h2 {}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    box-shadow: 0 0 15px -5px black;
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 15px;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores > .actor {
+    display: grid;
+    place-content: center;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores > .actor > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores > .actor > p {
+    font-size: 12px;
+    place-self: center;
+}

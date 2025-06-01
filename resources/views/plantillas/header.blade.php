@@ -9,7 +9,7 @@
                 <img src="{{ asset('storage/header/header_nuevo_icon.svg') }}" alt="">
                 Nuevo
             </a>
-            <a href="">
+            <a href="/popular">
                 <img src="{{ asset('storage/header/header_popular_icon.svg') }}" alt="">
                 Popular
             </a>
