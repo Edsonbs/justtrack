@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustTrack - Nuevo</title>
+    <title>JustTrack - {{ $lista->nombre }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/nuevoView.css', 'resources/js/animacion_texto_ancho.js'])
+    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/elementosListaView.css'])
 </head>
 
 <body>
-    <!--Traemos la plantilla que tiene el header de toda la web-->
     @include('plantillas.header')
     <main>
+        <h1>{{ $lista->nombre }}</h1>
         <section id="contenedor_peliculas">
             <!--<a class="pelicula" id="5340987" href="">
                 <img src="https://m.media-amazon.com/images/M/MV5BZWU4NDY0ODktOGI3OC00NWE1LWIwYmQtNmJiZWU3NmZlMDhkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
@@ -25,9 +25,7 @@
                     <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
                 </div>
             </a>-->
-
-            <!-- Usamos una plantilla para que muestre todas las películas de la base de datos-->
-            @foreach ($peliculas as $pelicula)
+            @forelse ($reproducibles as $pelicula)
             <a class="pelicula" id="{{ $pelicula->id }}" href="/pelicula/{{ $pelicula->id }}">
                 <img src="{{ $pelicula->url_caratula }}" alt="{{ $pelicula->nombre }}">
                 <h1><span>{{ $pelicula->nombre }}</span></h1>
@@ -39,12 +37,12 @@
                     <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
                 </div>
             </a>
-            @endforeach
+            @empty
+            <p style="text-align:center; width: 100%;">No hay elementos en esta lista.</p>
+            @endforelse
         </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
 
 </html>

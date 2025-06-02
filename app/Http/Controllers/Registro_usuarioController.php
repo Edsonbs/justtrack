@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Rol;
+use App\Models\Listas;
+use App\Models\Roles;
+use App\Models\TiposListas;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -29,9 +31,22 @@ class Registro_usuarioController extends Controller
         $usuario->save();
 
         // Buscar el rol "comun" y asignárselo
-        $rol = Rol::where('nombre', 'comun')->first();
+        $rol = Roles::where('nombre', 'comun')->first();
         if ($rol) {
             $usuario->roles()->attach($rol->id);
+        }
+
+        // Crear las 4 listas
+        $tipoSeries = TiposListas::where('nombre', 'REPRODUCIBLES_SERIES')->first();
+        $listasPorDefecto = ['Visto', 'Me gusta', 'No me gusta', 'Watchlist'];
+
+        foreach ($listasPorDefecto as $nombreLista) {
+            Listas::create([
+                'nombre' => $nombreLista,
+                'borrable' => false,
+                'id_propietario' => $usuario->id,
+                'id_tipo_lista' => $tipoSeries->id,
+            ]);
         }
 
         return redirect('/login')->with('success', 'Usuario registrado con éxito.');

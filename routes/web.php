@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListasController;
 use App\Http\Controllers\Login_usuarioController;
 use App\Http\Controllers\NuevoController;
 use App\Http\Controllers\PeliculaController;
@@ -13,6 +14,9 @@ Route::get('/', function () {
 });
 Route::get('/nuevo', [NuevoController::class, "showNuevo"]);
 Route::get('/popular', [PopularController::class, "showPopular"]);
+Route::get('/listas', [ListasController::class, 'showListas'])->middleware('auth');
+Route::get('/listas/{nombre}', [ListasController::class, 'showLista'])->middleware('auth')->name('listas.mostrar');
+
 Route::get('/pelicula/{id}', [PeliculaController::class, "showPelicula"]);
 
 Route::get('/registro', [Registro_usuarioController::class, "showFormularioRegistro"]);

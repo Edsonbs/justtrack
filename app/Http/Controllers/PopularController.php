@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Listas;
 use App\Models\Reproducibles;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PopularController extends Controller
 {

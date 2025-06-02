@@ -14,6 +14,9 @@ export default defineConfig({
                 'resources/css/popularView.css',
                 'resources/css/peliculaView.css',
                 'resources/css/loginRegistro_usuarioView.css',
+                'resources/css/nuevoView.css',
+                'resources/css/listasView.css',
+                'resources/css/elementosListaView.css',
                 
                 'resources/js/app.js',
                 'resources/js/animacion_texto_ancho.js',

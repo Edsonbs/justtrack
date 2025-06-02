@@ -16,10 +16,12 @@
                     <img src="{{ asset('storage/header/header_popular_icon.svg') }}" alt="">
                     Popular
                 </a>
-                <a href="">
+                @if (auth()->check())
+                <a href="/listas">
                     <img src="{{ asset('storage/header/header_lista_icon.svg') }}" alt="">
                     Listas
                 </a>
+                @endif
             </div>
         </div>
         <div id="segunda_fila">
