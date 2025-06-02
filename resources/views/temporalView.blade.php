@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JustTrack</title>
         @vite('resources/css/temporalView.css')
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
     </head>
     <body>
         <main>
