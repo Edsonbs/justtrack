@@ -29,7 +29,11 @@
         display: flex;
         gap: 15px;
     }
-    header > nav > #categorias > a {
+    header > nav > #categorias > #division1, #division2 {
+        display: flex;
+        gap: 15px;
+    }
+    header > nav > #categorias > #division1 > a, #division2 > a {
         color: white;
         text-decoration: none;
         background-color: rgba(255, 255, 255, 0.2);
@@ -41,11 +45,18 @@
         align-items: center;
         gap: 5px;
     }
-    header > nav > #categorias > a > img {
+    header > nav > #categorias > #division1 > a > img {
         margin-bottom: 2px;
         height: 22px;
     }
-    header > nav > #categorias > a:hover {
+    header > nav > #categorias > #division1 > a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    header > nav > #categorias > #division2 > a > img {
+        margin-bottom: 2px;
+        height: 22px;
+    }
+    header > nav > #categorias > #division2 > a:hover {
         background-color: rgba(255, 255, 255, 0.3);
     }
 
@@ -111,6 +122,25 @@
         color: white;
         background-color: rgb(0, 0, 0);
     }
+
+    header > nav > #segunda_fila > a {
+        color: white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+    }
+    header > nav > #segunda_fila > a > img {
+        height: 22px;
+        margin-right: 1px;
+    }
+    header > nav > #segunda_fila > a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
     
     /*Esto separa el header del contenido que está dentro de <main>*/
     #separador_header_contenido {
@@ -149,7 +179,11 @@
         gap: 15px;
         flex-wrap: wrap;
     }
-    header > nav > #categorias > a {
+    header > nav > #categorias > #division1, #division2 {
+        display: flex;
+        gap: 15px;
+    }
+    header > nav > #categorias > #division1 > a, #division2 > a {
         color: white;
         text-decoration: none;
         background-color: rgba(255, 255, 255, 0.2);
@@ -161,11 +195,18 @@
         align-items: center;
         gap: 5px;
     }
-    header > nav > #categorias > a > img {
+    header > nav > #categorias > #division1 > a > img {
         margin-bottom: 2px;
         height: 22px;
     }
-    header > nav > #categorias > a:hover {
+    header > nav > #categorias > #division1 > a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    header > nav > #categorias > #division2 > a > img {
+        margin-bottom: 2px;
+        height: 22px;
+    }
+    header > nav > #categorias > #division2 > a:hover {
         background-color: rgba(255, 255, 255, 0.3);
     }
 
@@ -231,6 +272,25 @@
     #role_selector > option {
         color: white;
         background-color: rgb(0, 0, 0);
+    }
+
+    header > nav > #segunda_fila > a {
+        color: white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+    }
+    header > nav > #segunda_fila > a > img {
+        height: 22px;
+        margin-right: 1px;
+    }
+    header > nav > #segunda_fila > a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
     }
     
     /*Esto separa el header del contenido que está dentro de <main>*/

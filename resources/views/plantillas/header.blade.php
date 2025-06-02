@@ -1,22 +1,26 @@
 <header>
     <nav>
         <div id="categorias">
-            <a href="">
-                <img src="{{ asset('storage/header/header_inicio_icon.svg') }}" alt="">
-                Inicio
-            </a>
-            <a href="">
-                <img src="{{ asset('storage/header/header_nuevo_icon.svg') }}" alt="">
-                Nuevo
-            </a>
-            <a href="/popular">
-                <img src="{{ asset('storage/header/header_popular_icon.svg') }}" alt="">
-                Popular
-            </a>
-            <a href="">
-                <img src="{{ asset('storage/header/header_lista_icon.svg') }}" alt="">
-                Listas
-            </a>
+            <div id="division1">
+                <a href="/">
+                    <img src="{{ asset('storage/header/header_inicio_icon.svg') }}" alt="">
+                    Inicio
+                </a>
+                <a href="/nuevo">
+                    <img src="{{ asset('storage/header/header_nuevo_icon.svg') }}" alt="">
+                    Nuevo
+                </a>
+            </div>
+            <div id="division2">
+                <a href="/popular">
+                    <img src="{{ asset('storage/header/header_popular_icon.svg') }}" alt="">
+                    Popular
+                </a>
+                <a href="">
+                    <img src="{{ asset('storage/header/header_lista_icon.svg') }}" alt="">
+                    Listas
+                </a>
+            </div>
         </div>
         <div id="segunda_fila">
             <div id="contenedor_buscador">
@@ -33,7 +37,22 @@
                 <option value="editor">Editor</option>
                 <option value="admin">Admin</option>
             </select>
+            @if (auth()->check())
+            {{-- Usuario autenticado (sesión iniciada) --}}
+            <!--Para hacer que el botón de cerrar sesión funcione con POST-->
+            <a href="#" title="Cerrar sesión" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <img src="{{ asset('storage/header/header_logout_icon.svg') }}" alt="">
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            @else
+            {{-- Usuario no autenticado --}}
+            <a href="/registro" title="Iniciar sesión">
+                <img src="{{ asset('storage/header/header_login_icon.svg') }}" alt="">
+            </a>
+            @endif
         </div>
     </nav>
 </header>
-<div id="separador_header_contenido"></div>
