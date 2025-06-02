@@ -21,4 +21,9 @@ class User extends Authenticatable
     {
         return $this->clave; // Sobrescribe para usar 'clave' en lugar de 'password'
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'USUARIOS_ROLES', 'id_usuario', 'id_rol');
+    }
 }

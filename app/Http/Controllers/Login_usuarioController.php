@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class Login_usuarioController extends Controller
 {
     public function showFormularioLogin() {
         return view('login_usuarioView');
