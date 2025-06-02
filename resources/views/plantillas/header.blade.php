@@ -56,3 +56,4 @@
         </div>
     </nav>
 </header>
+<div id="separador_header_contenido"></div>

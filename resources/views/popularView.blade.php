@@ -7,19 +7,6 @@
     <title>JustTrack - Popular</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/popularView.css', 'resources/js/animacion_texto_ancho.js'])
-    <style>
-        /*Esto separa el header del contenido que está dentro de <main>*/
-        @media (min-width: 1100px) {
-            #separador_header_contenido {
-                padding-top: 114px;
-            }
-        }
-        @media (max-width: 1099px) {
-            #separador_header_contenido {
-                padding-top: 137px;
-            }
-        }
-    </style>
 </head>
 
 <body>

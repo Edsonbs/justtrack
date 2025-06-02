@@ -79,6 +79,19 @@
     cursor: pointer;
 }
 
+/*Esto separa el header del contenido que está dentro de <main>*/
+@media (min-width: 1100px) {
+    #separador_header_contenido {
+        padding-top: 114px;
+    }
+}
+
+@media (max-width: 1099px) {
+    #separador_header_contenido {
+        padding-top: 137px;
+    }
+}
+
 /* Animación deslizando de derecha a izquierda un título muy largo */
 @keyframes animacion_titulo_largo {
     0%   { transform: translateX(0); }
