@@ -37,7 +37,7 @@
                     <p>No es solo lo que ves, es lo que te hace sentir. Lleva tu historial al siguiente nivel. Con JustTrack, tu tiempo frente a la pantalla tiene memoria.</p>
                 </section>
                 <section id="seccion_explicacion">
-                    <h1>Funcionamiento</h1>
+                    <h1>Apartados</h1>
                     <div id="apartado_enlaces">
                         <div id="apartado_inicio">
                             <img src="{{ asset('storage/inicio/inicio.png') }}" alt="">
