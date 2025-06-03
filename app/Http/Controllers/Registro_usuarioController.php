@@ -20,7 +20,7 @@ class Registro_usuarioController extends Controller
     {
         $request->validate([
             'nombre' => 'required|string|max:64',
-            'correo' => 'required|email|unique:usuarios,correo',
+            'correo' => 'required|email|unique:USUARIOS,correo',
             'clave' => 'required|string|max:128',
         ]);
 
