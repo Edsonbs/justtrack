@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ListasController;
 use App\Http\Controllers\Login_usuarioController;
 use App\Http\Controllers\NuevoController;
@@ -9,9 +10,8 @@ use App\Http\Controllers\Registro_usuarioController;
 use Illuminate\Support\Facades\Route;
 
 // Página por defecto.
-Route::get('/', function () {
-    return view('temporalView');
-});
+Route::get('/', [InicioController::class, "showInicio"]);
+
 Route::get('/nuevo', [NuevoController::class, "showNuevo"]);
 Route::get('/popular', [PopularController::class, "showPopular"]);
 Route::get('/listas', [ListasController::class, 'showListas'])->middleware('auth');
