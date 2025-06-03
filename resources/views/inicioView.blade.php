@@ -11,7 +11,6 @@
     <body>
         <!--Traemos la plantilla que tiene el header de toda la web-->
         @include('plantillas.header')
-        <div id="separador_header_contenido"></div>
         <main>
             <div id="limitador_ancho">
                 <section id="seccion_bienvenida">
