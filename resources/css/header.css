@@ -13,14 +13,14 @@
     }
 
     header > nav {
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: rgba(100, 100, 100, 0.25);
+        border: rgba(100, 100, 100, 0.25) solid 2px;
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         display: flex;
         padding: 20px;
         gap: 15px;
         border-radius: 20px;
-        border: rgba(0, 0, 0, 0.25) solid 2px;
     }
 
     /*BOTONES DE NAVEGACIÓN DE CABECERA*/

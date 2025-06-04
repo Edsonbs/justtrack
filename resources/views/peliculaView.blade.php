@@ -63,7 +63,7 @@
                             </div>-->
                             @foreach($pelicula->plataformas as $plataforma)
                             <div class="plataforma" id="{{ Str::slug($plataforma->nombre) }}">
-                                <img src="{{ $plataforma->url_logo }}" class="logo_plataforma" alt="">
+                                <img src="http://localhost/{{ $plataforma->ruta_logo }}" class="logo_plataforma" alt="">
                                 <p>{{ $plataforma->nombre }}</p>
                             </div>
                             @endforeach

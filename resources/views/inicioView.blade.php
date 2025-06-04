@@ -18,7 +18,7 @@
                     <h1>¡Bienvenido a JustTrack!</h1>
                     <!--<h1 id="bienvenida_loggeado">¡Bienvenido, Eddyson! Descubre, marca y lleva el control de todo lo que ves.</h1>-->
                     <p>Marca lo que te gusta, lo que no y lo que quieres ver o has visto.</p>
-                    <button>Comenzar</button>                
+                    <button onclick="window.location.href='/popular'">Comenzar</button>                
                 </section>
                 <section id="seccion_tutorial">
                     <h1>¿Cómo funciona?</h1>

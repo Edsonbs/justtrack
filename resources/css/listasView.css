@@ -22,21 +22,21 @@ main > #contenedor_listas {
     max-width: 95%;
 }
 main > #contenedor_listas > .lista {
-    background-color: rgba(0, 0, 0, 0.25);
-    border: rgba(0, 0, 0, 0.25) solid 2px;
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(100, 100, 100, 0.25);
+    border: rgba(100, 100, 100, 0.25) solid 2px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 15px;
     width: 160px;
     color: white;
     text-decoration: none;
-    backdrop-filter: blur(10px);
     box-shadow: 0 0 15px -10px black;
 }
 main > #contenedor_listas > .lista:hover {
-    background-color: rgba(80, 80, 80, 0.25);
-    border: rgba(0, 0, 0, 0.4) solid 2px;
-    box-shadow: 0 0 25px -10px black;
+    background-color: rgba(180, 180, 180, 0.25);
+    border: rgba(180, 180, 180, 0.25) solid 2px;
+    box-shadow: 0 0 25px -5px rgba(180, 180, 180, 0.6);
 }
 main > #contenedor_listas > .lista > h1 {}
 main > #contenedor_listas > .lista > p {

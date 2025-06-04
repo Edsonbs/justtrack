@@ -33,16 +33,16 @@
                 <h1><span>{{ $pelicula->nombre }}</span></h1>
                 <p>{{ \Carbon\Carbon::parse($pelicula->fecha_lanzamiento)->year }}</p>
                 <div class="interacciones_peliculas">
-                    <button title="boton_watchlist" id="boton_watchlist">
+                    <button title="boton_watchlist" id="boton_watchlist_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_no_marcado_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_visto">
+                    <button title="boton_watchlist" id="boton_visto_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_no_visto_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_like">
+                    <button title="boton_watchlist" id="boton_like_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_sin_like_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_dislike">
+                    <button title="boton_watchlist" id="boton_dislike_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
                     </button>
                 </div>

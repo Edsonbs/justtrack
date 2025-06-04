@@ -11,24 +11,24 @@
     transition: all 0.25s ease-in-out;
 }
 #contenedor_peliculas > .pelicula {
-    background-color: rgba(0, 0, 0, 0.25);
-    border: rgba(0, 0, 0, 0.25) solid 2px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(100, 100, 100, 0.25);
+    border: rgba(100, 100, 100, 0.25) solid 2px;
+    box-shadow: 0 0 15px -10px rgba(100, 100, 100, 0.25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 15px;
     width: fit-content;
     display: grid;
     place-content: center;
     place-self: center;
-    box-shadow: 0 0 15px -10px black;
     
 }
 #contenedor_peliculas > .pelicula:hover {
     cursor: pointer;
-    background-color: rgba(80, 80, 80, 0.25);
-    border: rgba(0, 0, 0, 0.4) solid 2px;
-    box-shadow: 0 0 25px -10px black;
+    background-color: rgba(180, 180, 180, 0.25);
+    border: rgba(180, 180, 180, 0.25) solid 2px;
+    box-shadow: 0 0 25px -5px rgba(180, 180, 180, 0.6);
 }
 #contenedor_peliculas > .pelicula > img {
     height: 300px;
@@ -57,8 +57,8 @@
     text-decoration: none;
 }
 #contenedor_peliculas > .pelicula > .interacciones_peliculas {
-    background-color: rgba(0, 0, 0, 0.25);
-    border: rgba(0, 0, 0, 0.25) solid 2px;
+    background-color: rgba(100, 100, 100, 0.25);
+    border: rgba(100, 100, 100, 0.25) solid 2px;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -80,8 +80,8 @@
     width: 25px;
     padding: 5px;
     border-radius: 50px;
-    border: rgba(0, 0, 0, 0.25) solid 2px;
-    background-color: rgba(0, 0, 0, 0.25);
+    border: rgba(100, 100, 100, 0.4) solid 2px;
+    background-color: rgba(100, 100, 100, 0.4);
 }
 #contenedor_peliculas > .pelicula > .interacciones_peliculas > button > img:hover {
     background-color: rgba(255, 255, 255, 0.3);
