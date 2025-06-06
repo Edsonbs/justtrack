@@ -51,7 +51,7 @@
             </form>
             @else
             {{-- Usuario no autenticado --}}
-            <a href="/registro" title="Iniciar sesión">
+            <a href="/login" title="Iniciar sesión">
                 <img src="{{ asset('storage/header/header_login_icon.svg') }}" alt="">
             </a>
             @endif
