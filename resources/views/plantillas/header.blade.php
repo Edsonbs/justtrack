@@ -34,12 +34,12 @@
 
                 <input type="search" name="buscador_principal" id="buscador_principal" placeholder="Escribe para buscar...">
             </div>
+            @if (auth()->check())
             <select name="role_selector" id="role_selector" title="Selector de rol">
                 <option value="comun">Común</option>
                 <option value="editor">Editor</option>
                 <option value="admin">Admin</option>
             </select>
-            @if (auth()->check())
             {{-- Usuario autenticado (sesión iniciada) --}}
             <!--Para hacer que el botón de cerrar sesión funcione con POST-->
             <a href="#" title="Cerrar sesión" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
