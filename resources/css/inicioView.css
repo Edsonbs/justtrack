@@ -38,9 +38,8 @@ main > #limitador_ancho > #seccion_bienvenida > h1 {
     text-align: center;
 }
 main > #limitador_ancho > #seccion_bienvenida > #bienvenida_loggeado {
-    font-size: 25px;
+    font-size: 34px;
     text-align: center;
-    min-width: 0;
 }
 main > #limitador_ancho > #seccion_bienvenida > p {
     text-align: center;
