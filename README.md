@@ -1,6 +1,6 @@
 # JustTrack
 
-JustTrack es un servicio online que te permite trackear contenido multimedia. Inicialmente sólo te permitirá trackear algunas películas y series, pero a futuro está planteado para permitirte trackear más contenido multimedia como pueden ser videojuegos o libros.
+JustTrack es un servicio online que te permite trackear contenido multimedia. Inicialmente sólo te permitirá trackear algunas películas, pero a futuro está planteado para permitirte trackear más contenido multimedia como pueden ser videojuegos o libros.
 
 ## Dependencias
 
@@ -42,11 +42,6 @@ sudo apt install mysql-server
 ```
 
 ## Cómo ejecutar
-
-1. Lo primero que tendremos que hacer es vaciar la carpeta en la que se encuentra la página por defecto de Apache.
-2. Lo siguiente que tendremos que hacer es clonar el repositorio en esa carpeta.
-3. Tendremos que acceder a la carpeta en donde tenemos el repositorio clonado.
-4. Tendremos que ejecutar los siguientes comandos en el orden indicado:
 
 ```shell
 # Eliminamos la página por defecto de Apache.
@@ -138,15 +133,3 @@ SELECT * FROM REPRODUCIBLES;
 ```
 
 Con estos pasos que acabamos de ejecutar ya tendremos nuestra base de datos completamente funcional y ya podremos utilizar la aplicación web JustTrack accediendo a la dirección IP de nuestro servidor.
-
-```shell
-composer install
-cp .env.example .env
-nano .env # Aquí tendremos que poner nuestros datos de conexión.
-php artisan key:generate
-sudo chmod -R 777 * # Podemos ajustar más los permisos si lo vemos necesario.
-npm install
-npm run build
-sudo a2enmod rewrite
-sudo service apache2 restart
-```
