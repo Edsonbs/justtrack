@@ -11,6 +11,12 @@
         main {
             background-image: url("{{ $pelicula->url_banner }}");
         }
+
+        @if (auth()->guest())
+        main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > #restriccion_edad {
+            width: 100%;
+        }
+        @endif
     </style>
 </head>
 
@@ -26,12 +32,14 @@
                 <div id="columna_izquierda">
                     <img src="{{ $pelicula->url_caratula }}" id="caratula_pelicula" alt="">
                     <div id="primera_fila_izquierda">
+                        @if (auth()->check())
                         <div class="interacciones_peliculas">
                             <img src="{{ asset('storage/botones_interaccion/contenido_no_marcado_icon.svg') }}" alt="">
                             <img src="{{ asset('storage/botones_interaccion/contenido_no_visto_icon.svg') }}" alt="">
                             <img src="{{ asset('storage/botones_interaccion/contenido_sin_like_icon.svg') }}" alt="">
                             <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
                         </div>
+                        @endif
                         <p id="restriccion_edad" title="Restricción de edad">{{ $pelicula->clasificacion_edad ?? '???' }}</p>
                     </div>
                     <div id="contenedor_info_rapida">
