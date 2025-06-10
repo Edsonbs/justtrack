@@ -12,7 +12,7 @@
 <body>
     @include('plantillas.header')
     <main>
-        <h1 style="color: white; text-align: center;">{{ $lista->nombre }}</h1>
+        <h1 style="color: white; text-align: center; margin-bottom: 20px;">{{ $lista->nombre }}</h1>
         <section id="contenedor_peliculas">
             <!--<a class="pelicula" id="5340987" href="">
                 <img src="https://m.media-amazon.com/images/M/MV5BZWU4NDY0ODktOGI3OC00NWE1LWIwYmQtNmJiZWU3NmZlMDhkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
