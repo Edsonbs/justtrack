@@ -12,6 +12,7 @@ main > #limitador_ancho {
     gap: 50px;
     margin-left: 5px;
     margin-right: 5px;
+    min-width: 0;
 }
 
 
@@ -26,6 +27,7 @@ main > #limitador_ancho > #seccion_bienvenida {
     border-radius: 25px;
     display: grid;
     place-content: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_bienvenida > img {
     width: 25%;
@@ -38,6 +40,7 @@ main > #limitador_ancho > #seccion_bienvenida > h1 {
 main > #limitador_ancho > #seccion_bienvenida > #bienvenida_loggeado {
     font-size: 25px;
     text-align: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_bienvenida > p {
     text-align: center;
@@ -77,6 +80,7 @@ main > #limitador_ancho > #seccion_tutorial {
     border-radius: 25px;
     display: grid;
     place-content: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_tutorial > h1 {
     text-align: center;
@@ -85,6 +89,7 @@ main > #limitador_ancho > #seccion_tutorial > h1 {
 main > #limitador_ancho > #seccion_tutorial > div {
     display: grid;
     gap: 20px;
+    min-width: 0;
     @media (min-width: 650px) {
         grid-template-columns: 1fr 1fr;
     }
@@ -131,6 +136,7 @@ main > #limitador_ancho > #seccion_explicacion {
     padding: 10px;
     padding-top: 50px;
     border-radius: 25px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > h1 {
     text-align: center;
@@ -139,6 +145,7 @@ main > #limitador_ancho > #seccion_explicacion > h1 {
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces {
     display: grid;
     gap: 20px;
+    min-width: 0;
     @media (min-width: 650px) {
         grid-template-columns: 1fr 1fr;
     }
@@ -146,18 +153,20 @@ main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces {
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces img {
     height: 100px;
 }
-main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > * {
+main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > div {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 5px;
+    min-width: 0;
 }
-main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > * > div {
+main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > div > div {
+    min-width: 0;
 }
-main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > * > div > h1 {
+main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > div > div > h1 {
     font-size: 20px;
 }
-main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > * > div > p {
+main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > div > div > p {
     color: rgb(235, 235, 235);
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_inicio {
@@ -165,24 +174,28 @@ main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_i
     border: rgba(255, 208, 0, 0.2) solid 2px;
     box-shadow: 0 0 15px -5px rgba(255, 208, 0, 0.2);
     border-radius: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_nuevo {
     background-color: rgba(0, 255, 0, 0.2);
     border: rgba(0, 255, 0, 0.2) solid 2px;
     box-shadow: 0 0 15px -5px rgba(0, 255, 0, 0.2);
     border-radius: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_popular {
     background-color: rgba(255, 0, 0, 0.2);
     border: rgba(255, 0, 0, 0.2) solid 2px;
     box-shadow: 0 0 15px -5px rgba(255, 0, 0, 0.2);
     border-radius: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_listas {
     background-color: rgba(0, 0, 255, 0.2);
     border: rgba(0, 0, 255, 0.2) solid 2px;
     box-shadow: 0 0 15px -5px rgba(0, 0, 255, 0.2);
     border-radius: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_enlaces > #apartado_inicio:hover {
     background-color: rgba(255, 208, 0, 0.4);
@@ -212,6 +225,7 @@ main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda {
     box-shadow: 0 0 15px -5px rgba(170, 170, 170, 0.2);
     border-radius: 20px;
     margin-top: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda:hover {
     background-color: rgba(170, 170, 170, 0.4);
@@ -221,7 +235,9 @@ main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda:hover {
 main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda > img {
     height: 100px;
 }
-main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda > div {}
+main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda > div {
+    min-width: 0;
+}
 main > #limitador_ancho > #seccion_explicacion > #apartado_busqueda > div > h1 {
     font-size: 20px;
 }
@@ -242,6 +258,7 @@ main > #limitador_ancho > #seccion_vision_futuro {
     border-radius: 25px;
     display: grid;
     place-content: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_vision_futuro > img {
     height: 150px;
@@ -260,6 +277,7 @@ main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro {
     
     display: grid;
     gap: 20px;
+    min-width: 0;
     @media (min-width: 650px) {
         grid-template-columns: 1fr 1fr;
     }
@@ -272,6 +290,7 @@ main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div
     display: grid;
     place-content: center;
     padding: 15px;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div:hover {
     background-color: rgba(255, 0, 0, 0.4);
@@ -282,7 +301,9 @@ main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div
     height: 100px;
     place-self: center;
 }
-main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div > div {}
+main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div > div {
+    min-width: 0;
+}
 main > #limitador_ancho > #seccion_vision_futuro > #apartado_vision_futuro > div > h1 {
     font-size: 20px;
 }
@@ -305,6 +326,7 @@ main > #limitador_ancho > #seccion_dato_curioso {
     border-radius: 25px;
     display: flex;
     align-items: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_dato_curioso > img {
     height: 100px;
@@ -330,6 +352,7 @@ main > #limitador_ancho > #apartado_feedback {
     display: grid;
     place-content: center;
     margin-bottom: 50px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > img {
     height: 170px;
@@ -351,6 +374,7 @@ main > #limitador_ancho > #apartado_feedback > form {
     padding: 15px;
     display: grid;
     gap: 20px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > form:hover {
     background-color: rgba(0, 0, 0, 0.4);
@@ -366,6 +390,7 @@ main > #limitador_ancho > #apartado_feedback > form > div {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 25px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > form > div > label {}
 main > #limitador_ancho > #apartado_feedback > form > div > input {
@@ -375,10 +400,12 @@ main > #limitador_ancho > #apartado_feedback > form > div > input {
     flex: 1;
     font-size: 15px;
     height: 34px;
-    margin-left: 20px;
+    margin-left: 10px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > form > div > #input_asunto_correo {
-    margin-left: 39px;
+    margin-left: 29px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > form > div > input::placeholder {
     color: rgb(211, 211, 211);
@@ -398,6 +425,7 @@ main > #limitador_ancho > #apartado_feedback > form > #contenedor_campo_cuerpo >
     font-size: 15px;
     color: white;
     margin-top: 5px;
+    min-width: 0;
 }
 main > #limitador_ancho > #apartado_feedback > form > #contenedor_campo_cuerpo > textarea::placeholder {
     color: rgb(211, 211, 211);
