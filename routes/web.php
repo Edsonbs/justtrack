@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [InicioController::class, 'showInicio']);
 Route::post('/enviar-feedback', [InicioController::class, 'enviarCorreo'])->name('feedback.enviar');
 
-
 // Vistas del header.
 Route::get('/nuevo', [NuevoController::class, 'showNuevo']);
 Route::get('/popular', [PopularController::class, 'showPopular']);

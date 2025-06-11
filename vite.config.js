@@ -18,6 +18,7 @@ export default defineConfig({
                 'resources/css/listasView.css',
                 'resources/css/elementosListaView.css',
                 'resources/css/inicioView.css',
+                'resources/css/busquedaView.css',
                 
                 'resources/js/app.js',
                 'resources/js/animacion_texto_ancho.js',
