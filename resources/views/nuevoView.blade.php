@@ -28,8 +28,10 @@
 
             <!-- Usamos una plantilla para que muestre todas las películas de la base de datos-->
             @foreach ($peliculas as $pelicula)
-            <a class="pelicula" id="{{ $pelicula->id }}" href="/pelicula/{{ $pelicula->id }}">
-                <img src="{{ $pelicula->url_caratula }}" alt="{{ $pelicula->nombre }}">
+            <div class="pelicula" id="{{ $pelicula->id }}">
+                <a href="/pelicula/{{ $pelicula->id }}">
+                    <img src="{{ $pelicula->url_caratula }}" alt="{{ $pelicula->nombre }}">
+                </a>
                 <h1><span>{{ $pelicula->nombre }}</span></h1>
                 <p>{{ \Carbon\Carbon::parse($pelicula->fecha_lanzamiento)->year }}</p>
                 @if (auth()->check())
@@ -48,7 +50,7 @@
                     </button>
                 </div>
                 @endif
-            </a>
+            </div>
             @endforeach
         </section>
     </main>

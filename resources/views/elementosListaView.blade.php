@@ -26,25 +26,29 @@
                 </div>
             </a>-->
             @forelse ($reproducibles as $pelicula)
-            <a class="pelicula" id="{{ $pelicula->id }}" href="/pelicula/{{ $pelicula->id }}">
-                <img src="{{ $pelicula->url_caratula }}" alt="{{ $pelicula->nombre }}">
+            <div class="pelicula" id="{{ $pelicula->id }}">
+                <a href="/pelicula/{{ $pelicula->id }}">
+                    <img src="{{ $pelicula->url_caratula }}" alt="{{ $pelicula->nombre }}">
+                </a>
                 <h1><span>{{ $pelicula->nombre }}</span></h1>
                 <p>{{ \Carbon\Carbon::parse($pelicula->fecha_lanzamiento)->year }}</p>
+                @if (auth()->check())
                 <div class="interacciones_peliculas">
-                    <button title="boton_watchlist" id="boton_watchlist_{{ $pelicula->id }}">
+                    <button title="Marcar como 'Lo quiero ver'" id="boton_watchlist_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_no_marcado_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_visto_{{ $pelicula->id }}">
+                    <button title="Marcar como 'Visto'" id="boton_visto_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_no_visto_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_like_{{ $pelicula->id }}">
+                    <button title="Marcar como 'Me gusta'" id="boton_like_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_sin_like_icon.svg') }}" alt="">
                     </button>
-                    <button title="boton_watchlist" id="boton_dislike_{{ $pelicula->id }}">
+                    <button title="Marcar como 'No me gusta'" id="boton_dislike_{{ $pelicula->id }}">
                         <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
                     </button>
                 </div>
-            </a>
+                @endif
+            </div>
             @empty
             <p style="text-align:center; width: 100%; color: white;">No hay elementos en esta lista.</p>
             @endforelse

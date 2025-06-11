@@ -33,12 +33,12 @@
 #contenedor_peliculas > .pelicula > a {
     height: 300px;
     width: 240px;
+    margin-bottom: 10px;
 }
 #contenedor_peliculas > .pelicula > a > img {
     height: 300px;
     width: 240px;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 #contenedor_peliculas > .pelicula > h1 {
     color: white;

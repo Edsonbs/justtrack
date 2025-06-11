@@ -38,8 +38,9 @@ main > #limitador_ancho > #seccion_bienvenida > h1 {
     text-align: center;
 }
 main > #limitador_ancho > #seccion_bienvenida > #bienvenida_loggeado {
-    font-size: 34px;
+    font-size: 25px;
     text-align: center;
+    min-width: 0;
 }
 main > #limitador_ancho > #seccion_bienvenida > p {
     text-align: center;
@@ -391,6 +392,9 @@ main > #limitador_ancho > #apartado_feedback > form > div {
     border-radius: 25px;
     min-width: 0;
 }
+main > #limitador_ancho > #apartado_feedback > form > .correo_enviado {
+    background-color: rgba(87, 136, 201, 0.4);
+}
 main > #limitador_ancho > #apartado_feedback > form > div > label {}
 main > #limitador_ancho > #apartado_feedback > form > div > input {
     background-color: rgba(255, 255, 255, 0.0);
@@ -439,10 +443,23 @@ main > #limitador_ancho > #apartado_feedback > form > button {
     height: 34px;
     font-size: 15px;
 }
+main > #limitador_ancho > #apartado_feedback > form > #boton_enviado {
+    background-color: rgba(53, 108, 180, 0.4);
+    color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 34px;
+    font-size: 15px;
+}
 main > #limitador_ancho > #apartado_feedback > form > button:hover {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     cursor: pointer;
+}
+main > #limitador_ancho > #apartado_feedback > form > #boton_enviado {
+    cursor: default;
 }
 
 /*Esto separa el header del contenido que está dentro de <main>*/

@@ -20,7 +20,7 @@
                 @if (auth()->check())
                 <h1 id="bienvenida_loggeado">¡Bienvenid@, {{ auth()->user()->nombre }}!</h1>
                 @else
-                <h1>¡Bienvenid@  a JustTrack!</h1>
+                <h1>¡Bienvenid@ a JustTrack!</h1>
                 @endif
                 <p>Marca lo que te gusta, lo que no y lo que quieres ver o has visto.</p>
                 <button onclick="window.location.href='/popular'">Comenzar</button>
@@ -119,25 +119,47 @@
                 <img src="{{ asset('storage/inicio/mail.png') }}" alt="">
                 <h1>Feedback</h1>
                 <p>¡Porque tu opinión importa! Puedes enviarnos alguna sugerencia que se te ocurra.</p>
-                <form action="">
-                    <div>
-                        <label for="input_correo_usuario">Tu correo:</label>
-                        <input type="email" name="correo" id="input_correo_usuario" placeholder="Escribe tu correo">
-                        <img src="{{ asset('storage/inicio/correo_logo.svg') }}" alt="">
-                    </div>
-                    <div>
-                        <label for="input_asunto_correo">Asunto:</label>
-                        <input type="text" name="asunto_correo" id="input_asunto_correo" placeholder="Dinos brevemente de qué trata tu sugerencia.">
-                        <img src="{{ asset('storage/inicio/asunto_logo.svg') }}" alt="">
-                    </div>
-                    <div id="contenedor_campo_cuerpo">
-                        <label for="input_cuerpo_correo">Cuerpo:</label>
-                        <textarea name="cuerpo_correo" id="input_cuerpo_correo" placeholder="Detállanos de qué se trata la sugerencia que nos brindas."></textarea>
-                    </div>
-                    <button type="submit">
-                        Enviar
-                        <img src="{{ asset('storage/inicio/enviar_logo.svg') }}" alt="">
-                    </button>
+                <form method="POST" action="{{ route('feedback.enviar') }}">
+                    @csrf
+                    @if(session('success'))
+                        <div class="correo_enviado">
+                            <label for="input_correo_usuario">Tu correo:</label>
+                            <input disabled type="email" name="correo" id="input_correo_usuario" placeholder="Escribe tu correo" value="{{ session('correo') }}">
+                            <img src="{{ asset('storage/inicio/correo_azul_logo.svg') }}" alt="">
+                        </div>
+                        <div class="correo_enviado">
+                            <label for="input_asunto_correo">Asunto:</label>
+                            <input disabled type="text" name="asunto_correo" id="input_asunto_correo" placeholder="Dinos brevemente de qué trata tu sugerencia." value="{{ session('asunto_correo') }}">
+                            <img src="{{ asset('storage/inicio/asunto_azul_logo.svg') }}" alt="">
+                        </div>
+                        <div id="contenedor_campo_cuerpo" class="correo_enviado">
+                            <label for="input_cuerpo_correo">Cuerpo:</label>
+                            <textarea disabled name="cuerpo_correo" id="input_cuerpo_correo" placeholder="Detállanos de qué se trata la sugerencia que nos brindas.">{{ session('cuerpo_correo') }}</textarea>
+                        </div>
+                        <button id="boton_enviado" disabled>
+                            {{ session('success') }}
+                            <img src="{{ asset('storage/inicio/enviar_azul_logo.svg') }}" alt="">
+                        </button>
+                    @else
+                        <div>
+                            <label for="input_correo_usuario">Tu correo:</label>
+                            <input type="email" name="correo" id="input_correo_usuario" placeholder="Escribe tu correo">
+                            <img src="{{ asset('storage/inicio/correo_logo.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <label for="input_asunto_correo">Asunto:</label>
+                            <input type="text" name="asunto_correo" id="input_asunto_correo" placeholder="Dinos brevemente de qué trata tu sugerencia.">
+                            <img src="{{ asset('storage/inicio/asunto_logo.svg') }}" alt="">
+                        </div>
+                        <div id="contenedor_campo_cuerpo">
+                            <label for="input_cuerpo_correo">Cuerpo:</label>
+                            <textarea name="cuerpo_correo" id="input_cuerpo_correo" placeholder="Detállanos de qué se trata la sugerencia que nos brindas."></textarea>
+                        </div>
+                        <button type="submit">
+                            Enviar
+                            <img src="{{ asset('storage/inicio/enviar_logo.svg') }}" alt="">
+                        </button>
+                    @endif
                 </form>
             </section>
         </div>
