@@ -83,7 +83,13 @@ header > nav {
         flex: 1;
         padding: 5px;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > img {
+    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > button {
+        display: grid;
+        place-content: center;
+        border-radius: 100%;
+        background-color: transparent;
+    }
+    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > button > img {
         border: rgba(0, 0, 0, 0.25) solid 2px;
         background-color: rgba(0, 0, 0, 0.25);
         height: 25px;
@@ -91,7 +97,7 @@ header > nav {
         padding: 5px;
         border-radius: 100%;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > img:hover {
+    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas > button > img:hover {
         background-color: rgba(255, 255, 255, 0.25);
         cursor: pointer;
     }

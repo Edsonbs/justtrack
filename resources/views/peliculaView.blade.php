@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>JustTrack - {{ $pelicula->nombre }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/peliculaView.css'])
+    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/peliculaView.css', 'resources/js/botones_listas.js'])
     <style>
         main {
             background-image: url("{{ $pelicula->url_banner }}");
         }
 
-        @if (auth()->guest())
-        main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > #restriccion_edad {
+        @if (auth()->guest()) main>#contenedor_info>#limitador_ancho>#columna_izquierda>#primera_fila_izquierda>#restriccion_edad {
             width: 100%;
         }
+
         @endif
     </style>
 </head>
@@ -34,10 +35,26 @@
                     <div id="primera_fila_izquierda">
                         @if (auth()->check())
                         <div class="interacciones_peliculas">
-                            <img src="{{ asset('storage/botones_interaccion/contenido_no_marcado_icon.svg') }}" alt="">
-                            <img src="{{ asset('storage/botones_interaccion/contenido_no_visto_icon.svg') }}" alt="">
-                            <img src="{{ asset('storage/botones_interaccion/contenido_sin_like_icon.svg') }}" alt="">
-                            <img src="{{ asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
+                            <button title="Marcar como 'Lo quiero ver'" id="boton_watchlist_{{ $pelicula->id }}">
+                                <img src="{{ in_array($pelicula->id, $idsPorLista['Watchlist']) 
+                                ? asset('storage/botones_interaccion/contenido_marcado_icon.svg') 
+                                : asset('storage/botones_interaccion/contenido_no_marcado_icon.svg') }}" alt="">
+                            </button>
+                            <button title="Marcar como 'Visto'" id="boton_visto_{{ $pelicula->id }}">
+                                <img src="{{ in_array($pelicula->id, $idsPorLista['Visto']) 
+                                ? asset('storage/botones_interaccion/contenido_visto_icon.svg') 
+                                : asset('storage/botones_interaccion/contenido_no_visto_icon.svg') }}" alt="">
+                            </button>
+                            <button title="Marcar como 'Me gusta'" id="boton_like_{{ $pelicula->id }}">
+                                <img src="{{ in_array($pelicula->id, $idsPorLista['Me gusta']) 
+                                ? asset('storage/botones_interaccion/contenido_con_like_icon.svg') 
+                                : asset('storage/botones_interaccion/contenido_sin_like_icon.svg') }}" alt="">
+                            </button>
+                            <button title="Marcar como 'No me gusta'" id="boton_dislike_{{ $pelicula->id }}">
+                                <img src="{{ in_array($pelicula->id, $idsPorLista['No me gusta']) 
+                                ? asset('storage/botones_interaccion/contenido_con_dislike_icon.svg') 
+                                : asset('storage/botones_interaccion/contenido_sin_dislike_icon.svg') }}" alt="">
+                            </button>
                         </div>
                         @endif
                         <p id="restriccion_edad" title="Restricción de edad">{{ $pelicula->clasificacion_edad ?? '???' }}</p>
