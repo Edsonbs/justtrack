@@ -10,13 +10,10 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     protected $table = 'USUARIOS'; // Tu tabla personalizada
-
     protected $primaryKey = 'id';
-
     public $timestamps = false; // Asumido por tu tabla
-
     protected $fillable = ['nombre', 'correo', 'clave'];
-
+    
     public function getAuthPassword()
     {
         return $this->clave; // Sobrescribe para usar 'clave' en lugar de 'password'

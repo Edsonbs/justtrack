@@ -12,8 +12,23 @@ class PopularController extends Controller
 {
     // Muestra la página "popular".
     public function showPopular() {
-        // Obtenemos todas las películas que hay en la base de datos.
         $peliculas = Reproducibles::all();
-        return view('popularView', compact('peliculas'));
+
+        $usuario = Auth::user();
+
+        // Obtener IDs de reproducibles por cada lista del usuario
+        $listas = Listas::where('id_propietario', $usuario->id)
+            ->with('reproducibles:id') // Solo IDs
+            ->get()
+            ->keyBy('nombre'); // Para acceder por nombre: 'Visto', 'Me gusta', etc.
+
+        $idsPorLista = [
+            'Watchlist' => $listas['Watchlist']->reproducibles->pluck('id')->toArray(),
+            'Visto' => $listas['Visto']->reproducibles->pluck('id')->toArray(),
+            'Me gusta' => $listas['Me gusta']->reproducibles->pluck('id')->toArray(),
+            'No me gusta' => $listas['No me gusta']->reproducibles->pluck('id')->toArray(),
+        ];
+
+        return view('popularView', compact('peliculas', 'idsPorLista'));
     }
 }

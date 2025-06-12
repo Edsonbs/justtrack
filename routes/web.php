@@ -19,6 +19,7 @@ Route::get('/nuevo', [NuevoController::class, 'showNuevo']);
 Route::get('/popular', [PopularController::class, 'showPopular']);
 Route::get('/listas', [ListasController::class, 'showListas'])->middleware('auth');
 Route::get('/listas/{nombre}', [ListasController::class, 'showLista'])->middleware('auth')->name('listas.mostrar');
+Route::post('/listas/agregar', [ListasController::class, 'addPeliculaLista'])->middleware('auth')->name('listas.agregar');
 Route::get('/busqueda', [BusquedaController::class, 'showBusqueda'])->name('busqueda');
 
 // Vista dque representa cualquier película de la base de datos.

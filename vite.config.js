@@ -22,6 +22,7 @@ export default defineConfig({
                 
                 'resources/js/app.js',
                 'resources/js/animacion_texto_ancho.js',
+                'resources/js/botones_listas.js',
             ],
             refresh: true,
         }),
