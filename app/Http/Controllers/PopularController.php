@@ -5,18 +5,19 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Listas;
 use App\Models\Reproducibles;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PopularController extends Controller
 {
     // Muestra la página "popular".
     public function showPopular() {
+        // Obtenemos todas las películas de la base de datos.
         $peliculas = Reproducibles::all();
 
+        // Obtenemos el usuario con el que la sesión está iniciada.
         $usuario = Auth::user();
 
-        // Obtener IDs de reproducibles por cada lista del usuario
+        // Obtenemos IDs de las películas por cada lista del usuario
         $listas = Listas::where('id_propietario', $usuario->id)
             ->with('reproducibles:id') // Solo IDs
             ->get()
