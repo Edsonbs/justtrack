@@ -31,10 +31,23 @@ class ListasController extends Controller
             ->where('id_propietario', $usuario->id)
             ->firstOrFail();
 
-        // Cargar los reproducibles relacionados
-        $reproducibles = $lista->reproducibles()->get();
+        // Cargar las películas de la lista
+        $peliculas = $lista->reproducibles()->get();
 
-        return view('elementosListaView', compact('lista', 'reproducibles'));
+        // Obtenemos IDs de las películas por cada lista del usuario
+        $listas = Listas::where('id_propietario', $usuario->id)
+            ->with('reproducibles:id') // Solo IDs
+            ->get()
+            ->keyBy('nombre'); // Para acceder por nombre: 'Visto', 'Me gusta', etc.
+
+        $idsPorLista = [
+            'Watchlist' => $listas['Watchlist']->reproducibles->pluck('id')->toArray(),
+            'Visto' => $listas['Visto']->reproducibles->pluck('id')->toArray(),
+            'Me gusta' => $listas['Me gusta']->reproducibles->pluck('id')->toArray(),
+            'No me gusta' => $listas['No me gusta']->reproducibles->pluck('id')->toArray(),
+        ];
+
+        return view('elementosListaView', compact('lista', 'peliculas', 'idsPorLista'));
     }
 
     /**
