@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CalificacionesReproducibles;
 use App\Models\Listas;
 use App\Models\ListasReproducibles;
 use Illuminate\Http\Request;
@@ -85,6 +86,57 @@ class ListasController extends Controller
             $accion = 'añadido';
         }
 
+        $this->actualizarCalificacion($usuario->id, $request->id_reproducible);
+
         return response()->json(['success' => true, 'accion' => $accion]);
+    }
+
+    private function actualizarCalificacion($idUsuario, $idReproducible)
+    {
+        // Obtener IDs de las listas del usuario por nombre
+        $listas = Listas::where('id_propietario', $idUsuario)
+            ->whereIn('nombre', ['Visto', 'Me gusta', 'No me gusta'])
+            ->pluck('id', 'nombre');
+
+        // Comprobar si la película está en cada lista
+        $enVisto = ListasReproducibles::where('id_lista', $listas['Visto'] ?? null)
+            ->where('id_reproducible', $idReproducible)->exists();
+
+        $enMeGusta = ListasReproducibles::where('id_lista', $listas['Me gusta'] ?? null)
+            ->where('id_reproducible', $idReproducible)->exists();
+
+        $enNoMeGusta = ListasReproducibles::where('id_lista', $listas['No me gusta'] ?? null)
+            ->where('id_reproducible', $idReproducible)->exists();
+
+        // Lógica de calificación
+        if (!$enVisto) {
+            // Si no está en Visto, se elimina la calificación
+            CalificacionesReproducibles::where('id_usuario', $idUsuario)
+                ->where('id_reproducible', $idReproducible)
+                ->delete();
+        } else {
+            if ($enMeGusta) {
+                $valor = 10;
+            } elseif ($enNoMeGusta) {
+                $valor = 0;
+            } else {
+                $valor = 5;
+            }
+
+            $registro = CalificacionesReproducibles::where('id_usuario', $idUsuario)
+                ->where('id_reproducible', $idReproducible)
+                ->first();
+
+            if ($registro) {
+                $registro->calificacion = $valor;
+                $registro->save();
+            } else {
+                CalificacionesReproducibles::create([
+                    'id_usuario' => $idUsuario,
+                    'id_reproducible' => $idReproducible,
+                    'calificacion' => $valor
+                ]);
+            }
+        }
     }
 }
