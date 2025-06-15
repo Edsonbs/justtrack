@@ -17,12 +17,12 @@
                 <p>¿No tienes una cuenta? <a href="/registro">Registrarse</a>.</p>
                 <div id="contenedor_campo_correo">
                     <label for="correo_usuario">Correo:</label>
-                    <input type="email" name="correo" id="campo_correo_usuario" placeholder="Escribe tu email...">
+                    <input type="email" name="correo" id="campo_correo_usuario" placeholder="Escribe tu email..." required>
                     <img src="{{ asset('storage/login_register/correo_logo.svg') }}" alt="">
                 </div>
                 <div id="contenedor_campo_clave">
                     <label for="clave_usuario">Contraseña:</label>
-                    <input type="password" name="clave" id="campo_clave_usuario" placeholder="Escribe tu contraseña...">
+                    <input type="password" name="clave" id="campo_clave_usuario" placeholder="Escribe tu contraseña..." required>
                     <img src="{{ asset('storage/login_register/llave_logo.svg') }}" alt="">
                 </div>
                 <button type="submit">

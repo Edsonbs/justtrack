@@ -143,17 +143,17 @@
                     @else
                         <div>
                             <label for="input_correo_usuario">Tu correo:</label>
-                            <input type="email" name="correo" id="input_correo_usuario" placeholder="Escribe tu correo">
+                            <input type="email" name="correo" id="input_correo_usuario" placeholder="Escribe tu correo" required>
                             <img src="{{ asset('storage/inicio/correo_logo.svg') }}" alt="">
                         </div>
                         <div>
                             <label for="input_asunto_correo">Asunto:</label>
-                            <input type="text" name="asunto_correo" id="input_asunto_correo" placeholder="Dinos brevemente de qué trata tu sugerencia.">
+                            <input type="text" name="asunto_correo" id="input_asunto_correo" placeholder="Dinos brevemente de qué trata tu sugerencia." required>
                             <img src="{{ asset('storage/inicio/asunto_logo.svg') }}" alt="">
                         </div>
                         <div id="contenedor_campo_cuerpo">
                             <label for="input_cuerpo_correo">Cuerpo:</label>
-                            <textarea name="cuerpo_correo" id="input_cuerpo_correo" placeholder="Detállanos de qué se trata la sugerencia que nos brindas."></textarea>
+                            <textarea name="cuerpo_correo" id="input_cuerpo_correo" placeholder="Detállanos de qué se trata la sugerencia que nos brindas." required></textarea>
                         </div>
                         <button type="submit">
                             Enviar
