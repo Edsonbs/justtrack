@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>JustTrack - Nuevo</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/nuevoView.css', 'resources/js/animacion_texto_ancho.js', 'resources/js/botones_listas.js'])
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/general.css', 'resources/css/nuevoView.css', 'resources/js/animacion_texto_ancho.js', 'resources/js/botones_listas.js'])
 </head>
 
 <body>
@@ -51,9 +51,7 @@
             @endforeach
         </section>
     </main>
-    <footer>
-
-    </footer>
+    @include('plantillas.footer')
 </body>
 
 </html>

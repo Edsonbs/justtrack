@@ -8,9 +8,9 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/header.css',
+                'resources/css/footer.css',
                 'resources/css/general.css',
 
-                'resources/css/temporalView.css',
                 'resources/css/popularView.css',
                 'resources/css/peliculaView.css',
                 'resources/css/loginRegistro_usuarioView.css',

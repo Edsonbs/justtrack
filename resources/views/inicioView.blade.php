@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustTrack</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/inicioView.css'])
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/general.css', 'resources/css/inicioView.css'])
     </style>
 </head>
 
@@ -164,8 +164,7 @@
             </section>
         </div>
     </main>
-    <footer>
-    </footer>
+    @include('plantillas.footer')
 </body>
 
 </html>

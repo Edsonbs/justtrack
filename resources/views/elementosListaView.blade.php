@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>JustTrack - {{ $lista->nombre }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/elementosListaView.css', 'resources/js/botones_listas.js'])
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/general.css', 'resources/css/elementosListaView.css', 'resources/js/botones_listas.js'])
 </head>
 
 <body>
@@ -54,7 +54,7 @@
             @endforelse
         </section>
     </main>
-    <footer></footer>
+    @include('plantillas.footer')
 </body>
 
 </html>

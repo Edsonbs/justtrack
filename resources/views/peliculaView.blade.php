@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>JustTrack - {{ $pelicula->nombre }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-    @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/peliculaView.css', 'resources/js/botones_listas.js'])
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/general.css', 'resources/css/peliculaView.css', 'resources/js/botones_listas.js'])
     <style>
         main {
             background-image: url("{{ $pelicula->url_banner }}");
@@ -137,6 +137,7 @@
             </div>
         </section>
     </main>
+    @include('plantillas.footer')
 </body>
 
 </html>

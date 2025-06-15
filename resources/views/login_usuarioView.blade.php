@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JustTrack - Iniciar sesión</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon/favicon.ico') }}">
-        @vite(['resources/css/header.css', 'resources/css/general.css', 'resources/css/loginRegistro_usuarioView.css'])
+        @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/general.css', 'resources/css/loginRegistro_usuarioView.css'])
     </head>
     <body>
         <!--Traemos la plantilla que tiene el header de toda la web-->
@@ -31,5 +31,6 @@
                 </button>
             </form>
         </main>
+        @include('plantillas.footer')
     </body>
 </html>

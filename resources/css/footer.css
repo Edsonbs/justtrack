@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex para que el footer se empuje abajo */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    color: white;
+    background-color: rgba(100, 100, 100, 0.25);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+    place-content: center;
+}
+
+footer > p {
+    text-align: center;
+}
+footer > p > span {
+    color: rgb(200, 200, 200);
+}
