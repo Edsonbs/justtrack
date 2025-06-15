@@ -8,6 +8,7 @@ use App\Models\Roles;
 use App\Models\TiposListas;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class Registro_usuarioController extends Controller
 {
@@ -26,8 +27,8 @@ class Registro_usuarioController extends Controller
 
         $usuario = new User();
         $usuario->nombre = $request->nombre;
-        $usuario->correo = $request->correo;
-        $usuario->clave = $request->clave; // sin hashear
+        $usuario->correo = strtolower($request->correo);
+        $usuario->clave = $request->clave; // Hasheada
         $usuario->save();
 
         // Buscar el rol "comun" y asignárselo
@@ -48,6 +49,13 @@ class Registro_usuarioController extends Controller
                 'id_tipo_lista' => $tipoSeries->id,
             ]);
         }
+
+        // Tras crear el usuario, enviarle un correo de bienvenida
+        Mail::raw("Hola {$usuario->nombre},\n\nTu cuenta en JustTrack ha sido creada correctamente. 🎉\n\nYa puedes iniciar sesión y empezar a gestionar tus películas y series favoritas.\n\n¡Gracias por unirte a nosotros!\n\n— El equipo de JustTrack", function ($message) use ($usuario) {
+            $message->to($usuario->correo)
+                ->from('justtrack.noreply@gmail.com', 'JustTrack')
+                ->subject('¡Bienvenid@ a JustTrack!');
+        });
 
         return redirect('/login')->with('success', 'Usuario registrado con éxito.');
     }

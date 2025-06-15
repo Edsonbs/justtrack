@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -19,5 +20,11 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Roles::class, 'USUARIOS_ROLES', 'id_usuario', 'id_rol');
+    }
+
+    // 🔐 Mutador para cifrar automáticamente la clave
+    public function setClaveAttribute($value)
+    {
+        $this->attributes['clave'] = Hash::make($value);
     }
 }
