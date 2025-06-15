@@ -85,6 +85,7 @@ INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Netflix', 'storage/platform
 INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Prime video', 'storage/platforms/prime_video_logo.jpg');
 INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('HBO', 'storage/platforms/hbo_logo.jpg');
 INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Movistar+', 'storage/platforms/movistar_plus_logo.jpg');
+INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Disney+', 'storage/platforms/disney_plus_logo.jpg');
 
 INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Odeon', 'storage/platforms/odeon_logo.png');
 INSERT INTO PLATAFORMAS (nombre, ruta_logo) VALUES ('Cinesa', 'storage/platforms/cinesa_logo.png');

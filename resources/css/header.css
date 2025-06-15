@@ -108,24 +108,6 @@
         display: none;
     }
 
-    #role_selector {
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 25px;
-        color: white;
-        outline: none;
-        cursor: pointer;
-    }
-    #role_selector:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-    #role_selector > option {
-        color: white;
-        background-color: rgb(0, 0, 0);
-    }
-
     header > nav > #segunda_fila > a {
         color: white;
         text-decoration: none;
@@ -263,24 +245,6 @@
         display: none;
     }
 
-    #role_selector {
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 25px;
-        color: white;
-        outline: none;
-        cursor: pointer;
-    }
-    #role_selector:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-    #role_selector > option {
-        color: white;
-        background-color: rgb(0, 0, 0);
-    }
-
     header > nav > #segunda_fila > a {
         color: white;
         text-decoration: none;
@@ -298,10 +262,5 @@
     }
     header > nav > #segunda_fila > a:hover {
         background-color: rgba(255, 255, 255, 0.3);
-    }
-    
-    /*Esto separa el header del contenido que está dentro de <main>*/
-    #separador_header_contenido {
-        /*padding-top: 137px;*/
     }
 }
