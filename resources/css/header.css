@@ -1,3 +1,4 @@
+/* VERSIÓN DE ESCRITORIO */
 @media (min-width: 1100px) {
     header {
         display: grid;
@@ -5,13 +6,15 @@
         width: 100vw;
         position: fixed;
         margin-top: 20px;
-        z-index: 999;
+        z-index: 999; /* Queremos que se encuentre en la capa más alta */
     }
 
+    /* Animación de transición para la cabecera */
     header * {
         transition: all 0.25s ease-in-out;
     }
 
+    /* Este elemento contiene todos los botones del header */
     header > nav {
         background-color: rgba(100, 100, 100, 0.25);
         border: rgba(100, 100, 100, 0.25) solid 2px;
@@ -23,8 +26,8 @@
         border-radius: 20px;
     }
 
-    /*BOTONES DE NAVEGACIÓN DE CABECERA*/
-    /*#categorias es para en la versión móvil separar en dos filas la cabecera*/
+    /* BOTONES DE NAVEGACIÓN DE CABECERA */
+    /* #categorias es para en la versión móvil separar en dos filas la cabecera */
     header > nav > #categorias {
         display: flex;
         gap: 15px;
@@ -60,15 +63,13 @@
         background-color: rgba(255, 255, 255, 0.3);
     }
 
-    /*BARRA DE BÚSQUEDA*/
-    /*#segunda_fila es para en la versión móvil separar en dos filas la cabecera*/
+    /* BARRA DE BÚSQUEDA */
+    /* #segunda_fila es para en la versión móvil separar en dos filas la cabecera */
     header > nav > #segunda_fila {
         display: flex;
         gap: 15px;
     }
-    header > nav > #segunda_fila > form {
-
-    }
+    header > nav > #segunda_fila > form {}
     header > nav > #segunda_fila > form > #contenedor_buscador {
         display: flex;
         align-items: center;
@@ -97,13 +98,14 @@
     header > nav > #segunda_fila > form > #contenedor_buscador > #buscador_principal::placeholder {
         color: rgb(211, 211, 211);
     }
-    /*QUITAMOS LA X QUE SALE A LA DERECHA DEL BUSCADOR AL ESCRIBIR*/
+
+    /* Quitamos la X que sale a la derecha del buscador al escribir */
     /* Para Chrome, Safari y navegadores basados en WebKit */
     input[type="search"]::-webkit-search-cancel-button {
         display: none;
         -webkit-appearance: none;
     }
-    /* Para Edge y versiones antiguas de IE (por si acaso) */
+    /* Para Edge y versiones antiguas de IE */
     input[type="search"]::-ms-clear {
         display: none;
     }
@@ -126,12 +128,9 @@
     header > nav > #segunda_fila > a:hover {
         background-color: rgba(255, 255, 255, 0.3);
     }
-    
-    /*Esto separa el header del contenido que está dentro de <main>*/
-    #separador_header_contenido {
-    }
 }
 
+/* VERSIÓN MÓVIL */
 @media (max-width: 1099px) {
     header {
         display: grid;
@@ -139,11 +138,12 @@
         width: 100vw;
         position: fixed;
         margin-top: 5px;
-        z-index: 999;
+        z-index: 999; /* Queremos que se encuentre en la capa más alta */
         margin-left: 5px;
         margin-right: 5px;
     }
 
+    /* Animación de transición para la cabecera */
     header * {
         transition: all 0.25s ease-in-out;
     }
@@ -159,8 +159,8 @@
         border: rgba(0, 0, 0, 0.25) solid 2px;
     }
 
-    /*BOTONES DE NAVEGACIÓN DE CABECERA*/
-    /*#categorias es para en la versión móvil separar en dos filas la cabecera*/
+    /* BOTONES DE NAVEGACIÓN DE CABECERA */
+    /* #categorias es para en la versión móvil separar en dos filas la cabecera */
     header > nav > #categorias {
         display: flex;
         gap: 15px;
@@ -197,14 +197,13 @@
         background-color: rgba(255, 255, 255, 0.3);
     }
 
-    /*BARRA DE BÚSQUEDA*/
-    /*#segunda_fila es para en la versión móvil separar en dos filas la cabecera*/
+    /* BARRA DE BÚSQUEDA */
+    /* #segunda_fila es para en la versión móvil separar en dos filas la cabecera */
     header > nav > #segunda_fila {
         display: flex;
         gap: 15px;
     }
-    header > nav > #segunda_fila > form {
-    }
+    header > nav > #segunda_fila > form {}
     header > nav > #segunda_fila > form > #contenedor_buscador {
         display: flex;
         align-items: center;
@@ -234,7 +233,7 @@
     header > nav > #segunda_fila > form > #contenedor_buscador > #buscador_principal::placeholder {
         color: rgb(211, 211, 211);
     }
-    /*QUITAMOS LA X QUE SALE A LA DERECHA DEL BUSCADOR AL ESCRIBIR*/
+    /* Quitamos la X que sale a la derecha del buscador al escribir */
     /* Para Chrome, Safari y navegadores basados en WebKit */
     input[type="search"]::-webkit-search-cancel-button {
         display: none;

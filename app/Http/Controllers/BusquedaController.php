@@ -39,7 +39,7 @@ class BusquedaController extends Controller
                 'Me gusta' => $listas['Me gusta']->reproducibles->pluck('id')->toArray(),
                 'No me gusta' => $listas['No me gusta']->reproducibles->pluck('id')->toArray(),
             ];
-    
+
             return view('busquedaView', compact('peliculas', 'idsPorLista'));
         } else {
             return view('busquedaView', compact('peliculas'));

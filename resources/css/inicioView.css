@@ -331,7 +331,6 @@ main > #limitador_ancho > #seccion_dato_curioso {
 main > #limitador_ancho > #seccion_dato_curioso > img {
     height: 100px;
 }
-main > #limitador_ancho > #seccion_dato_curioso > div > h1 {}
 main > #limitador_ancho > #seccion_dato_curioso > div > p {
     color: rgb(235, 235, 235);
     text-align: justify;
@@ -395,7 +394,6 @@ main > #limitador_ancho > #apartado_feedback > form > div {
 main > #limitador_ancho > #apartado_feedback > form > .correo_enviado {
     background-color: rgba(87, 136, 201, 0.4);
 }
-main > #limitador_ancho > #apartado_feedback > form > div > label {}
 main > #limitador_ancho > #apartado_feedback > form > div > input {
     background-color: rgba(255, 255, 255, 0.0);
     outline: none;
@@ -413,7 +411,6 @@ main > #limitador_ancho > #apartado_feedback > form > div > #input_asunto_correo
 main > #limitador_ancho > #apartado_feedback > form > div > input::placeholder {
     color: rgb(211, 211, 211);
 }
-main > #limitador_ancho > #apartado_feedback > form > div > img {}
 main > #limitador_ancho > #apartado_feedback > form > #contenedor_campo_cuerpo {
     display: grid;
     padding-top: 5px;

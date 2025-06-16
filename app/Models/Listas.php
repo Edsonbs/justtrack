@@ -5,12 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
+// Modelo que representa una lista de películas del usuario (como "Visto", "Me gusta", etc.)
 class Listas extends Model
 {
+    // Nombre de la tabla en la base de datos
     protected $table = 'LISTAS';
+    // Indica que esta tabla no tiene columnas 'created_at' ni 'updated_at'
     public $timestamps = false;
+    // Campos que se pueden rellenar en masa (mass assignment)
     protected $fillable = ['nombre', 'borrable', 'id_propietario', 'id_tipo_lista'];
 
+    /**
+     * Relación muchos a muchos: una lista puede tener muchas películas/series (reproducibles)
+     */
     public function reproducibles()
     {
         return $this->belongsToMany(Reproducibles::class, 'LISTAS_REPRODUCIBLES', 'id_lista', 'id_reproducible');

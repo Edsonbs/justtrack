@@ -1,9 +1,10 @@
-/* AJUSTAMOS EL MODO OSCURO DEL HEADER */
+/* AJUSTAMOS EL MODO OSCURO DEL HEADER POR VISIBILIDAD */
 header > nav {
     background-color: rgba(0, 0, 0, 0.25);
     border: rgba(0, 0, 0, 0.25) solid 2px;
 }
 
+/* VERSIÓN DE ESCRITORIO */
 @media (min-width: 830px) {
     main {
         color: white;
@@ -57,8 +58,6 @@ header > nav {
         height: fit-content;
     }
     main > #contenedor_info > #limitador_ancho > #columna_izquierda > #caratula_pelicula {
-        /*height: 625px;
-        width: 500px;*/
         width: 100%;
         border-radius: 20px;
         box-shadow: 0 0 15px -5px black;
@@ -69,7 +68,7 @@ header > nav {
         gap: 15px;
         align-items: center;
     }
-    
+
     /* APARTADO INTERACCIONES PELICULAS */
     main > #contenedor_info > #limitador_ancho > #columna_izquierda > #primera_fila_izquierda > .interacciones_peliculas {
         background-color: rgba(0, 0, 0, 0.25);
@@ -123,9 +122,6 @@ header > nav {
         align-items: center;
         border-radius: 10px;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #duracion_pelicula {}
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #nombre_director {}
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #calificacion_promedio {}
     
     /**********************/
     /* CONTENEDOR DERECHO */
@@ -142,7 +138,6 @@ header > nav {
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo {
         margin-top: 5px;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula > #ano_palicula {
         color: rgb(165, 165, 165);
         text-shadow: 0 0 5px black;
@@ -156,7 +151,6 @@ header > nav {
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis {
         text-align: justify;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > p {
         color: rgb(210, 210, 210);
         overflow-wrap: break-word;
@@ -167,7 +161,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;
@@ -199,7 +192,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > #trailers {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;
@@ -222,7 +214,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;
@@ -250,6 +241,7 @@ header > nav {
     }
 }
 
+/* VERSIÓN DE MÓVIL */
 @media (max-width: 829px) {
     main {
         color: white;
@@ -303,8 +295,6 @@ header > nav {
         height: fit-content;
     }
     main > #contenedor_info > #limitador_ancho > #columna_izquierda > #caratula_pelicula {
-        /*height: 625px;
-        width: 500px;*/
         width: 70%;
         border-radius: 20px;
         box-shadow: 0 0 15px -5px black;
@@ -364,9 +354,6 @@ header > nav {
         align-items: center;
         border-radius: 10px;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #duracion_pelicula {}
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #nombre_director {}
-    main > #contenedor_info > #limitador_ancho > #columna_izquierda > #contenedor_info_rapida > #calificacion_promedio {}
     
     /**********************/
     /* CONTENEDOR DERECHO */
@@ -383,7 +370,6 @@ header > nav {
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo {
         margin-top: 5px;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_titulo > #titulo_pelicula > #ano_palicula {
         color: rgb(165, 165, 165);
         text-shadow: 0 0 5px black;
@@ -397,7 +383,6 @@ header > nav {
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis {
         text-align: justify;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_sinopsis > p {
         color: rgb(210, 210, 210);
         overflow-wrap: break-word;
@@ -408,7 +393,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_plataformas_pelicula > #plataformas {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;
@@ -440,7 +424,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_trailers > #trailers {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;
@@ -463,7 +446,6 @@ header > nav {
         flex: 1;
         min-width: 0;
     }
-    main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > h2 {}
     main > #contenedor_info > #limitador_ancho > #columna_derecha > #contenedor_reparto > #actores {
         background-color: rgba(0, 0, 0, 0.25);
         border: rgba(0, 0, 0, 0.25) solid 2px;

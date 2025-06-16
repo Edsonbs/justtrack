@@ -22,7 +22,6 @@
     display: grid;
     place-content: center;
     place-self: center;
-    
 }
 #contenedor_peliculas > .pelicula:hover {
     cursor: pointer;
