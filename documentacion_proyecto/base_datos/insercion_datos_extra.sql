@@ -1,3 +1,5 @@
+USE JUSTTRACK;
+
 -- Creamos sagas de películas
 INSERT INTO SAGAS (nombre, descripcion) VALUES ('El contable', 'The Accountant presenta a Christian Wolff, un contable autista con habilidades matemáticas prodigiosas que trabaja para organizaciones criminales.');
 INSERT INTO SAGAS (nombre, descripcion) VALUES ('John Wick', 'John Wick es una saga de acción frenética donde un exasesino desata una guerra contra el crimen organizado tras perder lo único que le quedaba. Venganza, honor y balas en un mundo donde todos quieren matarlo… y nadie puede detenerlo.');
