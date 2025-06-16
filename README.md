@@ -133,3 +133,32 @@ SELECT * FROM REPRODUCIBLES;
 ```
 
 Con estos pasos que acabamos de ejecutar ya tendremos nuestra base de datos completamente funcional y ya podremos utilizar la aplicación web JustTrack accediendo a la dirección IP de nuestro servidor.
+
+Si queremos hacer un script en Linux para actualizar la página web cada vez que se haga un push, podemos usar el siguiente script (debemos actualizar las rutas donde corresponda según nuestra configuración):
+
+```bash
+#!/bin/bash
+
+# Eliminamos la versión actual del repositorio:
+sudo rm -R justtrack
+
+# Obtenemos la nueva versión de github:
+git clone git@github.com:Edsonbs/justtrack.git
+
+# Pasamos los archivos del nuevo repositorio a explotación en Apache:
+sudo rm -R /var/www/html/justtrack
+sudo cp -R justtrack /var/www/html/
+sudo chmod -R 777 /var/www/html/*
+
+# Generamos nuevamente todos los datos necesarios para que la web funcione:
+cd /var/www/html/justtrack/
+COMPOSER_ALLOW_SUPERUSER=1 composer install
+cp /root/.env /var/www/html/justtrack/ # Debemos tener un .env en la carpeta.
+php artisan key:generate
+npm install
+php artisan storage:link
+npm run build
+
+# Reiniciamos para aplicar los cambios:
+sudo service apache2 restart
+```
