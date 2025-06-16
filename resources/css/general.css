@@ -11,7 +11,7 @@
 
 /* Configuramos el fondo */
 body {
-    background-color: rgb(5, 20, 37);
+    background-color: rgb(1, 10, 20);
     background-image: url(/storage/background/fondo_estelar.gif);
     background-size: 40vh;
 }
