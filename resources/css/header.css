@@ -1,5 +1,5 @@
 /* VERSIÓN DE ESCRITORIO */
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     header {
         display: grid;
         place-content: center;
@@ -131,7 +131,7 @@
 }
 
 /* VERSIÓN MÓVIL */
-@media (max-width: 1099px) {
+@media (max-width: 949px) {
     header {
         display: grid;
         place-content: center;
@@ -170,6 +170,12 @@
         display: flex;
         gap: 15px;
     }
+    /* Para adaptarse mejor en pantallas menos anchas */
+    @media (max-width: 520px) {
+        header > nav > #categorias > #division1, #division2 {
+            flex: 1;
+        }
+    }
     header > nav > #categorias > #division1 > a, #division2 > a {
         color: white;
         text-decoration: none;
@@ -181,6 +187,8 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        width: 100%;
+        justify-content: center;
     }
     header > nav > #categorias > #division1 > a > img {
         margin-bottom: 2px;
@@ -203,7 +211,9 @@
         display: flex;
         gap: 15px;
     }
-    header > nav > #segunda_fila > form {}
+    header > nav > #segunda_fila > form {
+        flex: 1;
+    }
     header > nav > #segunda_fila > form > #contenedor_buscador {
         display: flex;
         align-items: center;
@@ -231,7 +241,7 @@
         padding-right: 10px;
     }
     header > nav > #segunda_fila > form > #contenedor_buscador > #buscador_principal::placeholder {
-        color: rgb(211, 211, 211);
+        color: rgb(210, 210, 210);
     }
     /* Quitamos la X que sale a la derecha del buscador al escribir */
     /* Para Chrome, Safari y navegadores basados en WebKit */
