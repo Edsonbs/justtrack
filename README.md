@@ -151,13 +151,13 @@ sudo cp -R justtrack /var/www/html/
 sudo chmod -R 777 /var/www/html/*
 
 # Generamos nuevamente todos los datos necesarios para que la web funcione:
-cd /var/www/html/justtrack/
-COMPOSER_ALLOW_SUPERUSER=1 composer install
-cp /root/.env /var/www/html/justtrack/ # Debemos tener un .env en la carpeta.
-php artisan key:generate
-npm install
-php artisan storage:link
-npm run build
+sudo cd /var/www/html/justtrack/
+sudo COMPOSER_ALLOW_SUPERUSER=1 composer install
+sudo cp /root/.env /var/www/html/justtrack/ # Debemos tener un .env en la carpeta.
+sudo php artisan key:generate
+sudo npm install
+sudo php artisan storage:link
+sudo npm run build
 
 # Reiniciamos para aplicar los cambios:
 sudo service apache2 restart
