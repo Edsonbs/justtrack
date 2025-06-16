@@ -100,15 +100,19 @@ footer {
 }
 
 /* Esto separa el header del contenido que está dentro de <main> */
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     #separador_header_contenido {
         padding-top: 114px;
     }
 }
-
-@media (max-width: 1099px) {
+@media (max-width: 949px) and (min-width: 521px) {
     #separador_header_contenido {
         padding-top: 137px;
+    }
+}
+@media (max-width: 520px) {
+    #separador_header_contenido {
+        padding-top: 177px;
     }
 }
 
